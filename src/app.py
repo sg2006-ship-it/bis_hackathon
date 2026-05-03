@@ -1,7 +1,15 @@
 import streamlit as st
 import time
 from inference import get_answer
+import sys
+import os
 
+# This allows app.py (inside /src) to see inference.py (in the root)
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+import streamlit as st
+import time
+from inference import get_answer
 # Page Config
 st.set_page_config(page_title="BIS Standard Discovery", page_icon="🏗️", layout="wide")
 
